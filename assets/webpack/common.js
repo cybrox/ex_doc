@@ -46,15 +46,7 @@ module.exports = {
       },
       {
         test: /\.(eot|svg|ttf|woff)$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: '[name].[ext]',
-              outputPath: 'html/fonts/'
-            }
-          }
-        ]
+        use: 'base64-inline-loader'
       }
     ]
   }
